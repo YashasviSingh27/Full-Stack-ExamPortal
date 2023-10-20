@@ -1,2 +1,2 @@
 # Exambuddy
-Exam Portal using Angular and Spring-Boot
+An Exam Portal using Angular for Frontend and Spring-Boot for Backend
