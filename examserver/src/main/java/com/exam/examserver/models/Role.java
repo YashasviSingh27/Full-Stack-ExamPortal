@@ -2,6 +2,7 @@ package com.exam.examserver.models;
 
 import jakarta.persistence.*;
 
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,18 +11,19 @@ import java.util.Set;
 public class Role {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long role_Id;
-    private String role_name;
+    private Long roleId;
+    private String roleName;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "role")
+    private Set<User_Role> userRoles = new HashSet<>();
 
-    public Role(Long role_Id, String role_name) {
-        this.role_Id = role_Id;
-        this.role_name = role_name;
+
+    public Role() {
     }
 
-    // mapping with User_role
-    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "role")
-    private Set<User_Role> userRoles = new HashSet<>();
+    public Role(Long roleId, String roleName) {
+        this.roleId = roleId;
+        this.roleName = roleName;
+    }
 
     public Set<User_Role> getUserRoles() {
         return userRoles;
@@ -31,22 +33,19 @@ public class Role {
         this.userRoles = userRoles;
     }
 
-    public Role() {
+    public Long getRoleId() {
+        return roleId;
     }
 
-    public Long getRole_Id() {
-        return role_Id;
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
     }
 
-    public void setRole_Id(Long role_Id) {
-        this.role_Id = role_Id;
+    public String getRoleName() {
+        return roleName;
     }
 
-    public String getRole_name() {
-        return role_name;
-    }
-
-    public void setRole_name(String role_name) {
-        this.role_name = role_name;
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
     }
 }
