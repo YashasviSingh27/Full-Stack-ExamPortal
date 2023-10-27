@@ -1,4 +1,4 @@
-package com.exam.examserver;
+package com.exam;
 
 import com.exam.examserver.models.User;
 import com.exam.examserver.models.Role;

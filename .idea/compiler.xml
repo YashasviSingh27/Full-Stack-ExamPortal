@@ -9,6 +9,9 @@
         <module name="examserver" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="examserver" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

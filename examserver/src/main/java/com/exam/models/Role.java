@@ -1,4 +1,4 @@
-package com.exam.examserver.models;
+package com.exam.models;
 
 import jakarta.persistence.*;
 
