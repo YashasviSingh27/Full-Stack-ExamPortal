@@ -1,8 +1,8 @@
 package com.exam;
 
-import com.exam.examserver.models.User;
-import com.exam.examserver.models.Role;
-import com.exam.examserver.models.User_Role;
+import com.exam.models.User;
+import com.exam.models.Role;
+import com.exam.models.User_Role;
 import com.exam.examserver.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

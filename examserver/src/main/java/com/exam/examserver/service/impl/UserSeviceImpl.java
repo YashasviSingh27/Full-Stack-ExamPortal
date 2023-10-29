@@ -1,8 +1,8 @@
 package com.exam.examserver.service.impl;
 
-import com.exam.examserver.models.Role;
-import com.exam.examserver.models.User;
-import com.exam.examserver.models.User_Role;
+import com.exam.models.Role;
+import com.exam.models.User;
+import com.exam.models.User_Role;
 import com.exam.examserver.repo.RoleRepository;
 import com.exam.examserver.repo.UserRepository;
 import com.exam.examserver.service.UserService;

@@ -1,6 +1,6 @@
 package com.exam.examserver.repo;
 
-import com.exam.examserver.models.User;
+import com.exam.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User,Long> {

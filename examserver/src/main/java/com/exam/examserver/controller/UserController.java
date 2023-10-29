@@ -1,9 +1,9 @@
 package com.exam.examserver.controller;
 
-import com.exam.examserver.models.User_Role;
+import com.exam.models.User_Role;
 import com.exam.examserver.service.UserService;
-import com.exam.examserver.models.Role;
-import com.exam.examserver.models.User;
+import com.exam.models.Role;
+import com.exam.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,6 +13,7 @@ import java.util.HashSet;
 @RestController
 @RequestMapping("/user")
 @CrossOrigin("*")
+
 public class UserController {
 
     @Autowired
@@ -21,6 +22,7 @@ public class UserController {
     // creating user
     @PostMapping("/")
     public User createUser(@RequestBody User user) throws Exception{
+        user.setProfile("default.png");
         Set<User_Role> roles = new HashSet<>();
         Role role = new Role();
         role.setRoleName("NORMAL");

@@ -1,7 +1,7 @@
 package com.exam.examserver.service;
 
-import com.exam.examserver.models.User;
-import com.exam.examserver.models.User_Role;
+import com.exam.models.User;
+import com.exam.models.User_Role;
 
 import java.util.Set;
 
