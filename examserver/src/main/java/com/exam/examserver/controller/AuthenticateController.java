@@ -1,6 +1,7 @@
 package com.exam.examserver.controller;
 
 import com.exam.examserver.config.JwtUtils;
+import com.exam.models.User;
 import com.exam.examserver.service.impl.UserDetailServiceImpl;
 import com.exam.models.JwtRequest;
 import com.exam.models.JwtResponse;
@@ -12,11 +13,12 @@ import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.security.Principal;
 
 @RestController
+@CrossOrigin("*")
 public class AuthenticateController {
 
     @Autowired
@@ -59,6 +61,13 @@ public class AuthenticateController {
         } catch (BadCredentialsException e){
             throw new Exception("INVALID Credentials " + e.getMessage());
         }
+    }
+
+
+    // returns the detail of current user
+    @GetMapping("/current-user")
+    public User getCurrentUser(Principal principal){
+        return ((User) this.userDetailService.loadUserByUsername(principal.getName()));
     }
 
 }

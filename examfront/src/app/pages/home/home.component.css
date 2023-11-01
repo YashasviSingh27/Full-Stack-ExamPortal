@@ -1,0 +1,29 @@
+/* Updated CSS with violet background color */
+.bootstrap-wrapper {
+    background-color: #3499db; /* Violet background color */
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Rest of the CSS remains the same */
+h1 {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
