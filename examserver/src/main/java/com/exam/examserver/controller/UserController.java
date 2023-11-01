@@ -35,7 +35,7 @@ public class UserController {
         return userService.createUser(user, roles);
     }
 
-    @GetMapping("/find/{username}")
+    @GetMapping("/{username}")
     public User getUser(@PathVariable("username") String username) throws Exception {
         User user = userService.getUser(username);
         if(user == null)

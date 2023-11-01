@@ -1,6 +1,6 @@
 package com.exam.models;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 public class User_Role {
