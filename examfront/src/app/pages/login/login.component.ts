@@ -45,7 +45,8 @@ export class LoginComponent implements OnInit{
           // login....
             this.login.loginUser(data.token);
 
-            this.login.getCurrentUser().subscribe((user:any)=> {
+            this.login.getCurrentUser().subscribe(
+              (user:any)=> {
                 this.login.setUser(user);
                 console.log(user);
                 // redirect ...ADMIN: admin-dashboard
@@ -53,9 +54,11 @@ export class LoginComponent implements OnInit{
                 if(this.login.getUserRole() == 'ADMIN'){
                     // admin dashboard
                     window.location.href ='/admin';
+                  this.login.loginStatusSubject.next(true);
                 }else if(this.login.getUserRole() == 'NORMAL'){
                     // normal user dashboard
                     window.location.href ='/user-dashboard';
+                  this.login.loginStatusSubject.next(true);
                 }else{
                     this.login.logout();
                 }

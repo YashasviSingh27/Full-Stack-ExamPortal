@@ -16,7 +16,7 @@ export class NormalGuard implements CanActivate {
 
     console.log("can Activate");
 
-    if(this.login.isLoggedIn() && this.login.getUserRole() == "USER") {
+    if(this.login.isLoggedIn() && this.login.getUserRole() == "NORMAL") {
       return true;
     }
 
