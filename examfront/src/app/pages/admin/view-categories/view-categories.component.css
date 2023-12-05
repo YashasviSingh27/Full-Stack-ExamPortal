@@ -1,0 +1,19 @@
+/* Add these styles to your component's CSS file or global styles */
+
+.title {
+    margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.category-title {
+    font-weight: bold; /* Optional: Make the title bold */
+    margin-bottom: 5px; /* Adjust the margin as needed */
+}
+
+.category-description {
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+/* Adjust the margin-top for the container as needed */
+.container {
+    margin-top: 20px; /* Adjust the margin as needed */
+}
