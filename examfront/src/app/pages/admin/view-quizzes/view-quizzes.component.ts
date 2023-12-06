@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import { QuizService } from 'src/app/services/quiz.service';
 import Swal from 'sweetalert2';
 
-
 @Component({
   selector: 'app-view-quizzes',
   templateUrl: './view-quizzes.component.html',

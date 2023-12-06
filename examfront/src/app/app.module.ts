@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -31,6 +31,11 @@ import { ViewQuizzesComponent } from './pages/admin/view-quizzes/view-quizzes.co
 import { AddQuizComponent } from './pages/admin/add-quiz/add-quiz.component';
 import { MatSlideToggleModule} from "@angular/material/slide-toggle";
 import { MatSelectModule} from "@angular/material/select";
+import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
+import { ViewQuizQuestionsComponent } from './pages/admin/view-quiz-questions/view-quiz-questions.component';
+import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
+import { CKEditorModule} from "@ckeditor/ckeditor5-angular";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,15 +52,18 @@ import { MatSelectModule} from "@angular/material/select";
     ViewCategoriesComponent,
     AddCategoryComponent,
     ViewQuizzesComponent,
-    AddQuizComponent
+    AddQuizComponent,
+    UpdateQuizComponent,
+    ViewQuizQuestionsComponent,
+    AddQuestionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatFormFieldModule,
     MatInputModule,
+    MatFormFieldModule,
     FormsModule,
     HttpClientModule,
     MatSnackBarModule,
@@ -63,10 +71,12 @@ import { MatSelectModule} from "@angular/material/select";
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-      MatSlideToggleModule,
-      MatSelectModule,
+    MatSlideToggleModule,
+    MatSelectModule,
+      CKEditorModule,
   ],
   providers: [authInterceptorProviders],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }
