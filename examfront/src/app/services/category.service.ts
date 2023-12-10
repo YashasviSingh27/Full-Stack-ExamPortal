@@ -9,7 +9,7 @@ export class CategoryService {
 
   constructor(private _http: HttpClient) { }
 
-  //load all the cateogries
+  //load all the categories
   public categories() {
     return this._http.get(`${baseUrl}/category/`);
   }

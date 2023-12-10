@@ -35,6 +35,11 @@ import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.compo
 import { ViewQuizQuestionsComponent } from './pages/admin/view-quiz-questions/view-quiz-questions.component';
 import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
 import { CKEditorModule} from "@ckeditor/ckeditor5-angular";
+import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
+import { SidebarComponent } from './pages/user/sidebar/sidebar.component';
+import { InstructionsComponent } from './pages/user/instructions/instructions.component';
+import { StartComponent } from './pages/user/start/start.component';
+import { MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 @NgModule({
   declarations: [
@@ -55,7 +60,11 @@ import { CKEditorModule} from "@ckeditor/ckeditor5-angular";
     AddQuizComponent,
     UpdateQuizComponent,
     ViewQuizQuestionsComponent,
-    AddQuestionComponent
+    AddQuestionComponent,
+    LoadQuizComponent,
+    SidebarComponent,
+    InstructionsComponent,
+    StartComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,6 +83,7 @@ import { CKEditorModule} from "@ckeditor/ckeditor5-angular";
     MatSlideToggleModule,
     MatSelectModule,
       CKEditorModule,
+    MatProgressSpinnerModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent],

@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit{
     username:'',
     password:''
   }
+    private router: any;
 
   formSubmit(){
     console.log('login btn clicked');
@@ -57,7 +58,7 @@ export class LoginComponent implements OnInit{
                   this.login.loginStatusSubject.next(true);
                 }else if(this.login.getUserRole() == 'NORMAL'){
                     // normal user dashboard
-                    window.location.href ='/user-dashboard';
+                    window.location.href ='/user-dashboard/0';
                   this.login.loginStatusSubject.next(true);
                 }else{
                     this.login.logout();
